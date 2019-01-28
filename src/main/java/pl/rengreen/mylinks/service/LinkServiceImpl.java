@@ -20,4 +20,8 @@ public class LinkServiceImpl {
     public Link getLinkById(Long id) {
         return linkRepository.getOne(id);
     }
+
+    public void addLink(Link link){
+        linkRepository.save(link);
+    }
 }

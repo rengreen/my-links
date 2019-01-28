@@ -23,4 +23,9 @@ public class LinkController {
     public Link getLinkById(@PathVariable Long id) {
         return linkService.getLinkById(id);
     }
+
+    @PostMapping("/")
+    public void addLink(@RequestBody Link link) {
+        linkService.addLink(link);
+    }
 }
