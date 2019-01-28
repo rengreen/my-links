@@ -16,4 +16,8 @@ public class LinkServiceImpl {
     public List<Link> getAllLinks() {
         return linkRepository.findAll();
     }
+
+    public Link getLinkById(Long id) {
+        return linkRepository.getOne(id);
+    }
 }

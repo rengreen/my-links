@@ -18,4 +18,9 @@ public class LinkController {
     public List<Link> getAllLinks() {
         return linkService.getAllLinks();
     }
+
+    @GetMapping("/{id}")
+    public Link getLinkById(@PathVariable Long id) {
+        return linkService.getLinkById(id);
+    }
 }
