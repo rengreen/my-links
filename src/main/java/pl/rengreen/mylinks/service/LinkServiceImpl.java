@@ -25,8 +25,19 @@ public class LinkServiceImpl {
         linkRepository.save(link);
     }
 
-    public void updateLink(Long id,Link link){
-        linkRepository.save(link);
+    public void updateLink(Long id,Link updatedLink){
+        if (linkRepository.existsById(id)) {
+            Link link = linkRepository.getOne(id);
+
+            link.setName(updatedLink.getName());
+            link.setLinkUrl(updatedLink.getLinkUrl());
+            link.setImageUrl(updatedLink.getImageUrl());
+            link.setCategory(updatedLink.getCategory());
+
+            linkRepository.save(link);
+        } else {
+            linkRepository.save(updatedLink);
+        }
     }
 
     public void deleteLink(Long id) {
