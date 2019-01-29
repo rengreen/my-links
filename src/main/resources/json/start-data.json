@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Spring Initializr",
+        "linkUrl": "https://start.spring.io/",
+        "imageUrl": "spring img",
+        "category": "Java"
+    },
+    {
+        "name": "Google Java Style Guide",
+        "linkUrl": "https://google.github.io/styleguide/javaguide.html",
+        "imageUrl": "guide img",
+        "category": "Java"
+    },
+    {
+        "name": "Virus Total",
+        "linkUrl": "https://www.virustotal.com/#/home/upload",
+        "imageUrl": "virus img",
+        "category": "Security"
+    },
+    {
+        "name": "empty",
+        "linkUrl": "empty",
+        "imageUrl": "empty",
+        "category": "empty"
+    },
+    {
+        "name": "Jak dojadę",
+        "linkUrl": "https://jakdojade.pl/warszawa/trasa/",
+        "imageUrl": "jak dojade img",
+        "category": "Common"
+    }
+]
