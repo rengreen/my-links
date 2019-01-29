@@ -28,4 +28,14 @@ public class LinkController {
     public void addLink(@RequestBody Link link) {
         linkService.addLink(link);
     }
+
+    @PutMapping("/{id}")
+    public void updateLink(@PathVariable Long id, @RequestBody Link link) {
+        linkService.updateLink(id, link);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteLink(@PathVariable Long id) {
+        linkService.deleteLink(id);
+    }
 }

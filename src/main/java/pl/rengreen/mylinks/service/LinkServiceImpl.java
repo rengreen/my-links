@@ -24,4 +24,12 @@ public class LinkServiceImpl {
     public void addLink(Link link){
         linkRepository.save(link);
     }
+
+    public void updateLink(Long id,Link link){
+        linkRepository.save(link);
+    }
+
+    public void deleteLink(Long id) {
+        linkRepository.deleteById(id);
+    }
 }
