@@ -21,15 +21,17 @@ public class Link {
     private String linkUrl;
     private String imageUrl;
     private String category;
+    private boolean mostUsed;
 
     public Link() {
     }
 
-    public Link(String name, String linkUrl, String imageUrl, String category) {
+    public Link(String name, String linkUrl, String imageUrl, String category, boolean mostUsed) {
         this.name = name;
         this.linkUrl = linkUrl;
         this.imageUrl = imageUrl;
         this.category = category;
+        this.mostUsed = mostUsed;
     }
 
     public Long getId() {
@@ -72,6 +74,14 @@ public class Link {
         this.category = category;
     }
 
+    public boolean isMostUsed() {
+        return mostUsed;
+    }
+
+    public void setMostUsed(boolean mostUsed) {
+        this.mostUsed = mostUsed;
+    }
+
     @Override
     public String toString() {
         return "Link{" +
@@ -80,6 +90,7 @@ public class Link {
                 ", linkUrl='" + linkUrl + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
                 ", category='" + category + '\'' +
+                ", mostUsed=" + mostUsed +
                 '}';
     }
 }

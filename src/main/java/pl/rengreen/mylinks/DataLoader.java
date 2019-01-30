@@ -41,15 +41,16 @@ public class DataLoader implements CommandLineRunner {
             String linkUrl = (String) jsonObject.get("linkUrl");
             String imageUrl = (String) jsonObject.get("imageUrl");
             String category = (String) jsonObject.get("category");
+            boolean mostUsed = (boolean) jsonObject.get("mostUsed");
 
-            linkRepository.save(new Link(name, linkUrl, imageUrl, category));
+            linkRepository.save(new Link(name, linkUrl, imageUrl, category, mostUsed));
         }
 
         /*
-        linkRepository.save(new Link("Spring Initializr", "https://start.spring.io/", "spring img", "Java"));
-        linkRepository.save(new Link("Google Java Style Guide", "https://google.github.io/styleguide/javaguide.html", "guide img", "Java"));
-        linkRepository.save(new Link("Virus Total", "https://www.virustotal.com/#/home/upload", "virus img", "Security"));
-        linkRepository.save(new Link("empty", "empty", "empty", "empty"));
+        linkRepository.save(new Link("Spring Initializr", "https://start.spring.io/", "spring img", "Java", 1));
+        linkRepository.save(new Link("Google Java Style Guide", "https://google.github.io/styleguide/javaguide.html", "guide img", "Java", 1));
+        linkRepository.save(new Link("Virus Total", "https://www.virustotal.com/#/home/upload", "virus img", "Security", 1));
+        linkRepository.save(new Link("empty", "empty", "empty", "empty", 1));
         */
 
         logger.info("Initial data inserted to DATABASE.");
