@@ -43,7 +43,9 @@ public class DataLoader implements CommandLineRunner {
             String category = (String) jsonObject.get("category");
             boolean mostUsed = (boolean) jsonObject.get("mostUsed");
 
-            linkRepository.save(new Link(name, linkUrl, imageUrl, category, mostUsed));
+            if (!linkRepository.existsByName(name)) {
+                linkRepository.save(new Link(name, linkUrl, imageUrl, category, mostUsed));
+            }
         }
 
         /*

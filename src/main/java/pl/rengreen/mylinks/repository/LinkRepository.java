@@ -5,4 +5,5 @@ import pl.rengreen.mylinks.model.Link;
 
 public interface LinkRepository extends JpaRepository<Link, Long> {
 
+    boolean existsByName(String name);
 }
