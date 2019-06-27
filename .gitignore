@@ -74,4 +74,4 @@ mvnw.cmd
 /log/
 
 ### h2 database ###
-/resources/data/
+/src/main/resources/data/
