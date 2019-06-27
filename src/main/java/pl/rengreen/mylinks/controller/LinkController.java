@@ -11,8 +11,12 @@ import java.util.List;
 @RequestMapping("/links")
 public class LinkController {
 
+    private final LinkServiceImpl linkService;
+
     @Autowired
-    private LinkServiceImpl linkService;
+    public LinkController(LinkServiceImpl linkService) {
+        this.linkService = linkService;
+    }
 
     @GetMapping("/")
     public List<Link> getAllLinks() {

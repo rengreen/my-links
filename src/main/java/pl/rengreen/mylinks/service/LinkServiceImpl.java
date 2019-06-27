@@ -10,8 +10,12 @@ import java.util.List;
 @Service
 public class LinkServiceImpl {
 
+    private final LinkRepository linkRepository;
+
     @Autowired
-    private LinkRepository linkRepository;
+    public LinkServiceImpl(LinkRepository linkRepository) {
+        this.linkRepository = linkRepository;
+    }
 
     public List<Link> getAllLinks() {
         return linkRepository.findAll();
